@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-form">
+         <form action="" class="sing-up">
+            <img src="logo.png" alt="logo sena" class="logo-sena">
+             <h2> Registrarse </h2>
+             <div class="social-networks"> 
+            </div>
+            <span>Escriba su ducumento y contraseña</span>
+            <div class="container-input">
+             <select name="Tipo-documento" size="1" >
+               <option value="Cedula" id="Tipo-documento"> Cedula de Ciudadania </option>
+               <option value="TarjIdentidad"> Tarjeta de identidad </option>
+               <option value="Extranjeria"> Cedula de Extrajeria </option>
+               <option value="PEP"> PEP </option>
+               <option value="Permiso"> Permiso por Proteccion Temporal </option>
+             
+             </select>
+            </div>
+            <div class="container-input">
+                <input type="number" placeholder="Documento" >
+            </div>
+            <div class="container-input">
+                <input 
+                  type="password" 
+                  placeholder="Contraseña" 
+                  id="passwordInput" 
+                  maxlength="15" 
+                />
+                <button type="button" id="togglePassword" aria-label="Mostrar contraseña">
+                  👁️
+                </button>
+                <script>
+                    const passwordInput = document.getElementById("passwordInput");
+                    const togglePassword = document.getElementById("togglePassword");
+                  
+                    togglePassword.addEventListener("click", () => {
+                     
+                      if (passwordInput.type === "password") {
+                        passwordInput.type = "text";
+                        togglePassword.textContent = "🙈"; 
+                      } else {
+                        passwordInput.type = "password";
+                        togglePassword.textContent = "👁️"; 
+                      }
+                    });
+                  </script>
+              </div>
+            
+            <button class="button"> REGISTRARSE </button>
+        </form>
+       </div>
+       <div class="container-welcome">
+        <h2> ¡Bienvenido! </h2>
+        <p> Bienvenid@ a nuestra pagina de reserva de 
+            ambientes SENA por favor registrese para poder continuar.</p><br><br>
+        <span> Si ya tiene cuenta de click aqui</span>
+        <a href="Login.html"><button class="button2"> INICIAR SESION </button> </a>   
+    </div>
+        
+    </div> 
+        
+</body>
+</html>
+

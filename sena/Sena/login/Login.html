@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-form">
+            <form action="" class="sing-in" id="loginForm">
+                <img src="logo.png" alt="logo sena" class="logo-sena">
+                <h2>Inicio de Sesión</h2>
+                <div class="social-networks"></div>
+                <span>Escriba su documento y contraseña</span>
+                <div class="container-input">
+                    <label for="Tipo-documento"></label>
+                    <select name="Tipo-documento" id="Tipo-documento" size="1">
+                        <option value="Cedula">Cédula de Ciudadanía</option>
+                        <option value="TarjIdentidad">Tarjeta de Identidad</option>
+                        <option value="Extranjeria">Cédula de Extranjería</option>
+                        <option value="PEP">PEP</option>
+                        <option value="Permiso">Permiso por Protección Temporal</option>
+                    </select>
+                </div>
+                <div class="container-input">
+                    <input 
+                        type="text" 
+                        id="documentInput" 
+                        placeholder="Documento" 
+                        maxlength="15" 
+                        onkeypress="return isNumberKey(event)" 
+                    />
+                </div>
+                <div class="container-input">
+                    <input 
+                        type="password" 
+                        placeholder="Contraseña" 
+                        id="passwordInput" 
+                        maxlength="15" 
+                    />
+                    <button type="button" id="togglePassword" aria-label="Mostrar contraseña">
+                        👁️
+                    </button>
+                </div>
+                <p class="error" id="errorMessage" style="color: red; display: none;"></p>
+                <a href="login/singUp.html">¿Olvidaste tu contraseña?</a><br>
+                <button type="button" class="button" id="loginBtn">INICIAR SESIÓN</button>
+            </form>
+        </div>
+
+        <div class="container-welcome">
+            <h2>Bienvenido</h2>
+            <p>Bienvenid@ a nuestra página de reserva de ambientes SENA. Por favor, ingrese los datos para poder continuar.</p><br><br>
+            <span>Si no tienes cuenta, haz clic aquí:</span>
+            <a href="singUp.html"><button class="button2">REGÍSTRATE</button></a>
+        </div>
+    </div>
+
+    <script>
+        
+        const users = [
+            { username: "123456789", password: "admin123", role: "Administrador" },
+            { username: "987654321", password: "aprendiz123", role: "Aprendiz" },
+            { username: "111222333", password: "funcionario123", role: "Funcionario" },
+        ];
+
+        
+        function isNumberKey(evt) {
+            const charCode = evt.which ? evt.which : evt.keyCode;
+            if (charCode < 48 || charCode > 57) {
+                evt.preventDefault();
+                return false;
+            }
+            return true;
+        }
+
+        
+        const passwordInput = document.getElementById("passwordInput");
+        const togglePassword = document.getElementById("togglePassword");
+        togglePassword.addEventListener("click", () => {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.textContent = "🙈";
+            } else {
+                passwordInput.type = "password";
+                togglePassword.textContent = "👁️";
+            }
+        });
+
+        
+        const loginBtn = document.getElementById("loginBtn");
+        const errorMessage = document.getElementById("errorMessage");
+
+        loginBtn.addEventListener("click", () => {
+            const username = document.getElementById("documentInput").value.trim();
+            const password = document.getElementById("passwordInput").value.trim();
+
+            if (username === "" || password === "") {
+                errorMessage.textContent = "Por favor, complete todos los campos.";
+                errorMessage.style.display = "block";
+                return;
+            }
+
+            const user = users.find(u => u.username === username && u.password === password);
+
+            if (user) {
+                switch (user.role) {
+                    case "Administrador":
+                        alert("Bienvenido, Administrador");
+                        window.location.href = "/Sena/index.html";
+                        break;
+                    case "Aprendiz":
+                        alert("Bienvenido, Aprendiz");
+                        window.location.href = "/Sena/index.html";
+                        break;
+                    case "Funcionario":
+                        alert("Bienvenido, Funcionario");
+                        window.location.href = "/Sena/index.html";
+                        break;
+                }
+            } else {
+                errorMessage.textContent = "Documento o contraseña incorrectos.";
+                errorMessage.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
