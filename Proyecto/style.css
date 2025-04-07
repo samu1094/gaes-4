@@ -1,0 +1,212 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F4F3;
+    background-image: url(estudiantes.jpg);
+    background-repeat: no-repeat;
+    background-size: 1550px;
+}
+
+.container{
+   width: 800px;
+   height: 500px;
+   display: flex;
+   flex-direction: row;
+   background-color: white;
+   border-radius: 15px;
+   overflow: hidden;
+   box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+   
+}
+   
+.container-form{
+    width: 100%;
+    overflow: hidden; 
+    min-width: 50%;
+}
+
+.container-form.sign-in{
+    min-width: 100%;
+}
+
+.container-welcome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    background-color: #1a9502ce;
+}
+
+.container-welcome h2{
+    margin-bottom: 40px;
+    background-color: transparent;
+}
+
+.container-welcome p, span{
+    font-size: 15px;
+    margin-left:19px ;
+    margin-right: 6px;
+}
+.container-welcome span{
+    font-size: 15px;
+}
+
+.container-registro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    background-color: #1a9502ce;
+}
+
+
+.input-registro ::placeholder{
+    padding-left: 10px;
+    color: black;
+}
+
+.container-input select.rol{
+    padding-left: 10px;
+}
+
+.logo-sena-registro{
+    height: 90px;
+}
+
+.logo-sena{
+    height: 80px;
+    
+}
+
+.container-logo{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 105%;
+    background-color: rgb(255, 247, 247); 
+    margin-bottom: 20px;
+}
+
+.container-logo img{
+    width:70px;
+
+}
+
+
+
+.button2{
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: solid white;
+    background-color: transparent;
+    color: white;
+}
+
+
+.container-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+}
+
+.container-form h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.container-form span{
+    font-size: 12px;
+    margin-bottom: 15px;
+    margin-left:0px ;
+}
+
+.container-input{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+}
+
+.container-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.container-form a{
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.container-registro a{
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.container-input select{
+    width: 100%;
+    border: none;
+    background-color: inherit;
+}
+
+.container-input ::placeholder{
+    padding-left: 10px;
+    color: black;
+}
+
+.button{
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #1a9502ce;
+    color: white;
+}
+
+
+
+.sign-up{
+    transform: translateX(-100%);
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="container"> 
+       <div class="container-form">
+        <form action="" class="sing-in">
+            <h2> Inicio de Sesión </h2>
+            <span>Escriba su ducumento y contraseña</span>
+            <div class="container-input">
+                <select name="Rol-usuario" size="1" class="rol" >
+                  <option value="Aprendiz" id="Rol-Usuario" class="Aprendiz"> Aprendiz </option>
+                  <option value="Funcionario"> Funcionario </option>
+                  <option value="Administrador"> Administrador </option>
+                </select>
+            </div>
+            <div class="container-input">
+                <label for="Tipo-documento"></label>
+             <select name="Tipo-documento" id="Tipo-documento" size="1" >
+               <option value="Cedula"> Cedula de Ciudadania </option>
+               <option value="TarjIdentidad"> Tarjeta de identidad </option>
+               <option value="Extranjeria"> Cedula de Extrajeria </option>
+               <option value="PEP"> PEP </option>
+               <option value="Permiso"> Permiso por Proteccion Temporal </option>
+             </select>
+            </div>
+            <div class="container-input">
+                <input type="text" placeholder="Documento">
+            </div>
+            <div class="container-input">
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <a href="/singUp.html"> ¿Olvidaste tu contraseña? </a>
+            <button class="button"> INICIAR SESION </button>
+        </form>
+       </div>
+
+       <div class="container-welcome">
+        <div class="container-logo"><img src="logo-sena-verde.jpg" alt="logo sena"></div>
+        <h2> Bienvenido </h2>
+        <p> Bienvenid@ a nuestra pagina de reserva de 
+            ambientes SENA por favor ingrese los datos poder continuar.</p><br><br>
+        <span> Si no tienes cuenta da click aqui</span>
+        <a href="/singUp.html"><button class="button2"> REGISTRATE </button> </a>   
+    </div>
+
+    </div>
+
+
+       
+
+     
+
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<Directory "C:/xampp/htdocs">
+    AllowOverride All
+    Require all granted
+</Directory>
+
+ErrorDocument 404 C:/xampp/htdocs/proyecto/404.php
